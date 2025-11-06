@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Productcard from "../cards/Productcard";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Searchbar from "../search/Searchbar";
 import { Box, Tabs, Tab } from "@mui/material";
+import Productcard from "../cards/Productcard";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -107,7 +107,8 @@ function Home() {
       <Grid container spacing={2} justifyContent="center">
         {filterdata.map((p) => (
           <Grid item key={p.id}>
-            <Productcard product={p} />
+            {/* <Productcard product={p} /> */}
+            <Productcard product={p}/>
           </Grid>
         ))}
       </Grid>

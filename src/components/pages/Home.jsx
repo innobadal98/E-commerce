@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import ProductCard from "../cards/productCard";
+import Productcard from "../cards/Productcard";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -107,7 +107,7 @@ function Home() {
       <Grid container spacing={2} justifyContent="center">
         {filterdata.map((p) => (
           <Grid item key={p.id}>
-            <ProductCard product={p} />
+            <Productcard product={p} />
           </Grid>
         ))}
       </Grid>

@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export default function ProductCard({ product }) {
+export default function Productcard({ product }) {
   return (
     <Card
       className="flex flex-col justify-between items-center rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white"
@@ -64,7 +64,6 @@ export default function ProductCard({ product }) {
         </div>
       </CardContent>
 
-      
       <CardActions className="justify-center pb-3">
         <Link
           to={`/${product.id}`}

@@ -101,16 +101,23 @@ function Home() {
         gutterBottom
         sx={{ color: "black", textAlign: "center", fontWeight: 600, mb: 4 }}
       >
-        🛍️ Our Products
+        Our Products
       </Typography>
 
       <Grid container spacing={2} justifyContent="center">
-        {filterdata.map((p) => (
-          <Grid item key={p.id}>
-            {/* <Productcard product={p} /> */}
-            <Productcard product={p}/>
-          </Grid>
-        ))}
+        {filterdata.length === 0 ? (
+          <Box sx={{ textAlign: "center", mt: 5 }}>
+            <Typography variant="h6" color="text.secondary">
+              🔍 No products found matching "{search}".
+            </Typography>
+          </Box>
+        ) : (
+          filterdata.map((p) => (
+            <Grid item key={p.id}>
+              <Productcard product={p} />
+            </Grid>
+          ))
+        )}
       </Grid>
     </div>
   );

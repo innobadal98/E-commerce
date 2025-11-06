@@ -14,7 +14,7 @@ function Header() {
             alt="App Logo"
             className="w-14 h-14"
           />
-          <h2 className="text-lg font-semibold text-blue-600">E-Cart</h2>
+          <h2 className="text-lg font-semibold text-blue-600">E-Commerce</h2>
         </div>
       </Link>
 
